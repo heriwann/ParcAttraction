@@ -18,4 +18,10 @@ export class AccueilComponent {
   {}
   
   public attractions: Observable<AttractionInterface[]> = this.attractionService.getAllAttraction()
+
+  public onSubmit(elt: any) {
+    console.log(elt.dataset)
+    // window.location.href = "/critique"
+  }
 }
+

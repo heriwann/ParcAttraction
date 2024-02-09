@@ -17,3 +17,12 @@ CREATE TABLE users (
     name varchar(255) not null,
     password varchar(255) not null
 );
+
+DROP TABLE IF EXISTS Critique;
+
+CREATE TABLE  Critique
+    critique_id serial PRIMARY KEY,
+    commentaire text NOT NULL,
+    note int CHECK (note BETWEEN 0 AND 5),
+    date_critique timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    user_id int REFERENCES users(users_id) ON DELETE cascade

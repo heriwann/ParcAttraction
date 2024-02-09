@@ -10,6 +10,11 @@ services:
       - 4200:4200
     hostname: "parc.loc"
 
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+
   api:
     volumes:
       - ./python:/var/www/html/api
