@@ -16,7 +16,7 @@
         <span>{{attraction.nom}}</span>
         <span>{{attraction.description}}</span>
         <span>{{attraction.difficulte}} / 5</span>
-        <button mat-button (click)="onSubmit(this)" attr.data.id="{{attraction.attraction_id}}" class="champ">Ajouter un critique</button>
+        <button mat-button (click)="onSubmit(this)" ng-attr-data-id="{{'attraction.attraction_id'}}" class="champ">Ajouter un critique</button>
       </div>
     </ng-container>
   </mat-card-content>

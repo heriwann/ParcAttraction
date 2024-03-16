@@ -21,8 +21,7 @@ CREATE TABLE users (
 DROP TABLE IF EXISTS Critique;
 
 CREATE TABLE  Critique
-    critique_id serial PRIMARY KEY,
+    critique_id int NOT NULL AUTO_INCREMENT,
     commentaire text NOT NULL,
     note int CHECK (note BETWEEN 0 AND 5),
-    date_critique timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    user_id int REFERENCES users(users_id) ON DELETE cascade
+    date_critique timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
